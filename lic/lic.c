@@ -84,8 +84,8 @@ parse_opts (int argc, char *argv[])
 		    "    --help, -h        Print this help message.\n"
 		    "    --version, -v     Print the program version.\n"
 		    "    --output, -o      Specify output filename.\n"
-		    "Report bugs to: github.com\n"
-		    "Lect home page: github\n"));
+		    "Report bugs to: https://github.com/bms-1984/lect/issues\n"
+		    "Lect home page: https://github.com/bms-1984/lect\n"));
           return 1;
 
         case 'v':

@@ -1,4 +1,4 @@
-AC_INIT([lect],[0.1],[benjaminsutter@outlook.com])
+AC_INIT([lect],[0.1],[https://github.com/bms-1984/lect/issues])
 AM_INIT_AUTOMAKE([gnu -Wall -Werror])
 AC_PROG_CC
 AC_PROG_LEX([noyywrap])
