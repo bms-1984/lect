@@ -8,7 +8,7 @@
 
 @dircategory Software development
 @direntry
-* Lic: (lect).                  The Lect Interpretive Compiler
+* Lic: (lic).                  The Lect Interpretive Compiler
 @end direntry
 
 @copying
@@ -32,14 +32,13 @@ Copyright @copyright{} 2022 Ben M. Sutter
 
 @contents
 
-@ifnottex
 @node Top
 @top Lic
 This is edition @value{EDITION},
 last updated @value{UPDATED},
 of @cite{The Lect Interpretive Compiler Manual},
 for @code{lic}, version @value{VERSION}.
-@end ifnottex
+
 @menu
 * Introduction::     Goals and Constraints
 * Index::            Complete index.
