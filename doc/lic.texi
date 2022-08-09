@@ -1,0 +1,65 @@
+\input texinfo
+@c %**start of header
+@setfilename lic.info
+@settitle Lic Manual
+@c %&&end of header
+
+@include version.texi
+
+@dircategory Software development
+@direntry
+* Lic: (lect).                  The Lect Interpretive Compiler
+@end direntry
+
+@copying
+This is edition @value{EDITION},
+last updated @value{UPDATED},
+of @cite{The Lect Interpretive Compiler Manual},
+for @code{lic}, version @value{VERSION}.
+
+Copyright @copyright{} 2022 Ben M. Sutter
+@end copying
+
+@titlepage
+@title The Lect Interpretive Compiler
+@subtitle A Thin Veneer
+@subtitle Edition @value{EDITION}
+@subtitle @value{UPDATED-MONTH}
+@page
+@vskip 0pt plus 1filll
+@insertcopying
+@end titlepage
+
+@contents
+
+@ifnottex
+@node Top
+@top Lic
+This is edition @value{EDITION},
+last updated @value{UPDATED},
+of @cite{The Lect Interpretive Compiler Manual},
+for @code{lic}, version @value{VERSION}.
+@end ifnottex
+@menu
+* Introduction::     Goals and Constraints
+* Index::            Complete index.
+@end menu
+
+@node Introduction
+@chapter Introduction
+@cindex introduction
+This is filler text for the introduction.
+
+@node What This Is
+@section What This Is
+First section of first chapter.
+
+@node What This Isn't
+@section What This Isn't.
+Second section of first chapter.
+
+@node Index
+@unnumbered Index
+@printindex cp
+
+@bye

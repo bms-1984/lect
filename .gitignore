@@ -1,0 +1,16 @@
+**/Makefile
+**/Makefile.in
+aclocal.m4
+autom4te.cache/
+config.*
+configure
+m4/**
+!m4/m4_ax_check_compile_flag.m4
+.deps/
+.dirstamp
+**/*.o
+**/*~
+**/*.info
+**/mdate-sh
+**/stamp-*
+ylwrap

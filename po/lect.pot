@@ -1,0 +1,38 @@
+# Lect pot file
+# Copyright (C) 2022 Ben M. Sutter
+# This file is distributed under the same license as the lect package.
+# Ben M. Sutter <benjaminsutter@outlook.com>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: lect 0.1\n"
+"Report-Msgid-Bugs-To: benjaminsutter@outlook.com\n"
+"POT-Creation-Date: 2022-08-09 07:47-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: lic/lic.c:35
+#, c-format
+msgid ""
+"input: %s\n"
+"output: %s\n"
+msgstr ""
+
+#: lic/lic.c:63
+#, c-format
+msgid ""
+"lic [options] file\n"
+"--help, -h        Print this help message.\n"
+"--version, -v     Print the program version.\n"
+"--output, -o      Specify output filename.\n"
+msgstr ""
+
+#: lic/lic.c:93
+msgid "no input file specified"
+msgstr ""
