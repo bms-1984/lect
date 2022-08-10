@@ -1,4 +1,5 @@
-/* Copyright (C) 2022 Ben M. Sutter
+/*
+   Copyright (C) 2022 Ben M. Sutter
 
    This file is part of Lect.
   
