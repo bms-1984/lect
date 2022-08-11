@@ -33,6 +33,7 @@ int parse_opts (int argc, char *argv[]);
 void cleanup ();
 extern void yyerror (char const *);
 extern FILE *yyin;
+FILE *input;
 
 int
 main (int argc, char *argv[])
@@ -53,7 +54,7 @@ main (int argc, char *argv[])
     case 0:
       break;
     }
-  FILE *input = fopen (input_filename, "r");
+  input = fopen (input_filename, "r");
   if (input == NULL)
     {
       perror (_("error: "));
@@ -139,6 +140,7 @@ parse_opts (int argc, char *argv[])
 void
 cleanup ()
 {
+  if (input != NULL) free (input);
   if (output_filename != NULL) free (output_filename);
   if (input_filename != NULL)  free (input_filename);
 }
