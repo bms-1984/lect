@@ -1,2 +1,3 @@
 # List of source files which contain translatable strings.
 lic/lic.c
+lic/parse.c

@@ -5,6 +5,7 @@ AC_PROG_LEX([noyywrap])
 AC_PROG_YACC
 AM_GNU_GETTEXT([external])
 AM_GNU_GETTEXT_VERSION([0.21])
+BISON_I18N
 AC_CHECK_FUNCS([asprintf strdup])
 AX_CHECK_COMPILE_FLAG([-std=gnu11], [
     CFLAGS+=" -std=gnu11"

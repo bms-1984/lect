@@ -457,7 +457,8 @@ int yy_flex_debug = 0;
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
 #line 1 "scan.l"
-/* Copyright (C) 2022 Ben M. Sutter
+/*
+   Copyright (C) 2022 Ben M. Sutter
 
    This file is part of Lect.
   
@@ -472,16 +473,16 @@ char *yytext;
    You should have received a copy of the GNU General Public License along with Lect. If
    not, see <https://www.gnu.org/licenses/>. 
 */
-#line 18 "scan.l"
+#line 19 "scan.l"
   #include <stdlib.h>
   #include <string.h>
   #include "parse.h"
 
   extern union value yylval; 
   extern void yyerror (char const *);
-#line 482 "scan.c"
+#line 483 "scan.c"
 
-#line 484 "scan.c"
+#line 485 "scan.c"
 
 #define INITIAL 0
 #define doc_comment 1
@@ -699,10 +700,10 @@ YY_DECL
 		}
 
 	{
-#line 33 "scan.l"
+#line 34 "scan.l"
 
 
-#line 705 "scan.c"
+#line 706 "scan.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -762,47 +763,47 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 /* rule 1 can match eol */
 YY_RULE_SETUP
-#line 35 "scan.l"
+#line 36 "scan.l"
 
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 36 "scan.l"
+#line 37 "scan.l"
 yylval.d = atof (yytext); return TOK_DOUBLE;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 37 "scan.l"
+#line 38 "scan.l"
 yylval.i = strtoll (yytext, NULL, 16); return TOK_INTEGER;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 38 "scan.l"
+#line 39 "scan.l"
 yylval.i = strtoll (yytext+2, NULL, 2); return TOK_INTEGER;
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 39 "scan.l"
+#line 40 "scan.l"
 yylval.i = strtoll (yytext, NULL, 8); return TOK_INTEGER;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 40 "scan.l"
+#line 41 "scan.l"
 yylval.i = strtoll (yytext, NULL, 10); return TOK_INTEGER;
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 41 "scan.l"
+#line 42 "scan.l"
 yylval.s = strdup (yytext); return TOK_ID;
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 42 "scan.l"
+#line 43 "scan.l"
 BEGIN doc_comment;
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 43 "scan.l"
+#line 44 "scan.l"
 {
                       int c;
                       for (;;) {
@@ -817,10 +818,10 @@ YY_RULE_SETUP
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 54 "scan.l"
+#line 55 "scan.l"
 ECHO;
 	YY_BREAK
-#line 823 "scan.c"
+#line 824 "scan.c"
 case YY_STATE_EOF(INITIAL):
 case YY_STATE_EOF(doc_comment):
 	yyterminate();
@@ -1826,4 +1827,4 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 54 "scan.l"
+#line 55 "scan.l"

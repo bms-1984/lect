@@ -22,6 +22,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <getopt.h>
+#include <errno.h>
 
 #include "parse.h"
 #define _(String) gettext(String)
@@ -31,12 +32,14 @@ char *output_filename;
 int parse_opts (int argc, char *argv[]);
 void cleanup ();
 extern void yyerror (char const *);
+extern FILE *yyin;
 
 int
 main (int argc, char *argv[])
 {
   setlocale (LC_ALL, "");
   bindtextdomain (PACKAGE, LOCALEDIR);
+  bindtextdomain ("bison-runtime", BISON_LOCALEDIR);
   textdomain (PACKAGE);
   int err = parse_opts (argc, argv);
   switch (err)
@@ -50,13 +53,22 @@ main (int argc, char *argv[])
     case 0:
       break;
     }
-  printf (_("input: %s\noutput: %s\n"), input_filename, output_filename);
-
+  FILE *input = fopen (input_filename, "r");
+  if (input == NULL)
+    {
+      perror (_("error: "));
+      cleanup ();
+      return errno;
+    }
+  yyin = input;
+  int ret = yyparse();
+  
   cleanup ();
+  return ret;
 }
 
 // performs argument processing
-// returns 0 on normal success, 1 on short success, and -1 on error
+// returns 0 on normal success, 1 on short success (i.e. --help, --version, et cetera, et cetera), and -1 on error
 int
 parse_opts (int argc, char *argv[])
 {

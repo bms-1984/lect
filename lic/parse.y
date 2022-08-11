@@ -16,12 +16,19 @@
 */
 
 %{
-  #include "stdlib.h"
-  #include "stdio.h"
-
+  #include <stdlib.h>
+  #include <stdio.h>
+  #include <gettext.h>
+  
+  #define _(String) gettext(String)
+  
   extern int yylex ();
   void yyerror (char const *);
 %}
+
+%define parse.error detailed
+%define parse.lac full
+%define parse.trace
 
 %union value {
   double d;
@@ -29,9 +36,9 @@
   char* s;
 }
 
-%token <s> TOK_ID
-%token <i> TOK_INTEGER
-%token <d> TOK_DOUBLE
+%token <s> TOK_ID _("identifier")
+%token <i> TOK_INTEGER _("integer")
+%token <d> TOK_DOUBLE _("double")
 
 %left '-' '+'
 %left '*' '/'
@@ -58,7 +65,7 @@ expr:
 
 void yyerror (char const *s)
 {
-  fprintf (stderr, "error: %s\n", s);
+  fprintf (stderr, _("error: %s\n"), s);
 }
 
 

@@ -39,7 +39,7 @@
 # define YY_YY_PARSE_H_INCLUDED
 /* Debug traces.  */
 #ifndef YYDEBUG
-# define YYDEBUG 0
+# define YYDEBUG 1
 #endif
 #if YYDEBUG
 extern int yydebug;
@@ -54,9 +54,9 @@ extern int yydebug;
     YYEOF = 0,                     /* "end of file"  */
     YYerror = 256,                 /* error  */
     YYUNDEF = 257,                 /* "invalid token"  */
-    TOK_ID = 258,                  /* TOK_ID  */
-    TOK_INTEGER = 259,             /* TOK_INTEGER  */
-    TOK_DOUBLE = 260               /* TOK_DOUBLE  */
+    TOK_ID = 258,                  /* "identifier"  */
+    TOK_INTEGER = 259,             /* "integer"  */
+    TOK_DOUBLE = 260               /* "double"  */
   };
   typedef enum yytokentype yytoken_kind_t;
 #endif
@@ -71,10 +71,10 @@ extern int yydebug;
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
-#line 25 "parse.y"
+#line 33 "parse.y"
 union value
 {
-#line 25 "parse.y"
+#line 33 "parse.y"
 
   double d;
   long long i;
@@ -83,7 +83,7 @@ union value
 #line 84 "parse.h"
 
 };
-#line 25 "parse.y"
+#line 33 "parse.y"
 typedef union value YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define YYSTYPE_IS_DECLARED 1
